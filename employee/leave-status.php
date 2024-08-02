@@ -98,8 +98,10 @@
                                 </td>
                                 <td align="center">
                                     <?php
-                                        $delete_icon = "<a href='delete-leave.php?id=$leave_id' class='link-button-danger' id='delete' name='delete'>&#10060;</a>";
-                                        echo $delete_icon;
+                                        if($status == "pending"){
+                                            $delete_icon = "<a href='delete-leave.php?id=$leave_id' class='link-button-danger' id='delete' name='delete'>&#10060;</a>";
+                                            echo $delete_icon;
+                                        }
                                     ?>
                                 </td>
                             <tr>
